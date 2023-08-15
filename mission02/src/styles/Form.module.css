@@ -1,0 +1,53 @@
+.A11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.Input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0 8px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+}
+
+.Input::placeholder {
+  font-weight: bold;
+  color: rgb(155, 148, 148);
+}
+.FieldSet {
+  border: none;
+}
+
+.SimpleLoginButton {
+  display: flex;
+  padding: 10px 0 8px;
+  margin-left: 10px;
+}
+
+.InfoToggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.SimpleLogin {
+  font-size: 13px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.7);
+}
