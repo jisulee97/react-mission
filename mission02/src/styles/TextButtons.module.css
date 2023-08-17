@@ -1,0 +1,12 @@
+.TextButton {
+  color: #191919;
+  font-size: 12px;
+}
+
+.TextButton:hover {
+  color: #191919;
+}
+
+.TextWeight {
+  font-weight: bold;
+}

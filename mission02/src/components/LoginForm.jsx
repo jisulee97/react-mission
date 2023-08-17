@@ -1,8 +1,9 @@
-import styles from "../styles/LoginForm.module.css";
+import styles from "../styles/LoginFormLayout.module.css";
 import Form from "./input/Form";
 import SimpleLoginButton from "./button/SimpleLoginButton";
 import LoginButtons from "./button/LoginButtons";
 import OrLine from "./OrLine";
+import TextButtons from "./button/TextButtons";
 
 function LoginForm() {
   return (
@@ -20,6 +21,13 @@ function LoginForm() {
         <LoginButtons label="QR코드 로그인" name="QR코드 로그인" />
 
         {/* text 버튼 */}
+        <div className={`${styles.TextButtonBox}`}>
+          <TextButtons name="회원가입" />
+          <div className={`${styles.FindInfo}`}>
+            <TextButtons name="계정 찾기" />
+            <TextButtons name="비밀번호 찾기" />
+          </div>
+        </div>
       </div>
     </div>
   );

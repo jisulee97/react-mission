@@ -12,3 +12,16 @@
   padding: 40px 0 40px;
   box-sizing: border-box;
 }
+
+/* 회원가입, 계정/ 비밀번호 찾기 레이아웃 */
+
+.TextButtonBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+
+.FindInfo {
+  display: flex;
+  gap: 20px;
+}

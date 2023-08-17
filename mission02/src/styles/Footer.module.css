@@ -1,0 +1,11 @@
+.Footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 60px 5px 60px;
+}
+
+.FooterCopyRight {
+  margin-bottom: 50px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}

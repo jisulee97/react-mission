@@ -21,11 +21,11 @@
   outline: none;
   border: none;
   border-bottom: 2px solid #ccc;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .Input::placeholder {
-  font-weight: bold;
+  font-weight: 500;
   color: rgb(155, 148, 148);
 }
 .FieldSet {
@@ -56,8 +56,10 @@
   line-height: 25px;
   color: rgba(0, 0, 0, 0.7);
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .SimpleLoginImg {
   margin-top: 1px;
+  cursor: pointer;
 }
