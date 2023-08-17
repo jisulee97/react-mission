@@ -1,0 +1,31 @@
+.OrText {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  color: #828282;
+  flex-basis: 100%;
+  padding: 15px 0;
+}
+
+.OrText::before {
+  content: "";
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.OrText::after {
+  content: "";
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.06);
+}

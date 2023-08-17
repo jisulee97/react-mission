@@ -11,6 +11,8 @@
   white-space: nowrap;
 }
 
+/* 인풋 */
+
 .Input {
   display: flex;
   justify-content: center;
@@ -28,12 +30,15 @@
 }
 .FieldSet {
   border: none;
+  padding: 0;
 }
+
+/* 간편 로그인 정보 */
 
 .SimpleLoginButton {
   display: flex;
   padding: 10px 0 8px;
-  margin-left: 10px;
+  margin: 15px 0 20px 10px;
 }
 
 .InfoToggle {
@@ -50,4 +55,9 @@
   font-size: 13px;
   line-height: 25px;
   color: rgba(0, 0, 0, 0.7);
+  margin-right: 5px;
+}
+
+.SimpleLoginImg {
+  margin-top: 1px;
 }

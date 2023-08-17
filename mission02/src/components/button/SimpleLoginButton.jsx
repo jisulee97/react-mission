@@ -10,8 +10,8 @@ function SimpleLoginButton() {
         className={`${styles.InfoToggle}`}
       ></input>
       <span className={`${styles.SimpleLogin}`}>간편로그인 정보 저장</span>
-      <div className={`${styles.A11yHidden}`}>
-        <img src="" alt="도움말 보기" />
+      <div className={`${styles.SimpleLoginImg}`}>
+        <img src="/assets/infocircle.svg" alt="도움말 보기" />
       </div>
     </div>
   );
