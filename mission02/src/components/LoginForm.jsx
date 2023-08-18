@@ -4,8 +4,11 @@ import SimpleLoginButton from "./button/SimpleLoginButton";
 import LoginButtons from "./button/LoginButtons";
 import OrLine from "./OrLine";
 import TextButtons from "./button/TextButtons";
+// import { useState } from "react";
 
 function LoginForm() {
+  // const [id, setId] = useState("");
+
   return (
     <div className={`${styles.LoginForm}`}>
       <div className={`${styles.LoginFormInnerBox}`}>

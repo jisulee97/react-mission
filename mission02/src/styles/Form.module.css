@@ -24,10 +24,30 @@
   font-size: 17px;
 }
 
+.InputBottomLine {
+  border-bottom: 2px solid #333;
+}
+
 .Input::placeholder {
   font-weight: 500;
   color: rgb(155, 148, 148);
 }
+
+.AddMessage {
+  font-size: 11px;
+  text-align: start;
+  padding-top: 10px;
+}
+
+.AddMessageNone {
+  display: none;
+}
+
+.TipText {
+  color: rgb(233, 14, 14);
+  font-weight: bold;
+}
+
 .FieldSet {
   border: none;
   padding: 0;
@@ -36,16 +56,39 @@
 /* 간편 로그인 정보 */
 
 .SimpleLoginButton {
+  position: relative;
   display: flex;
+  align-items: center;
   padding: 10px 0 8px;
-  margin: 15px 0 20px 10px;
+  margin-bottom: 10px;
+}
+
+.SimpleLoginIcon {
+  position: absolute;
+  left: 4.4px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background: url(https://accounts.kakaocdn.net/images/pc/ico_comm.png) 0 0
+    no-repeat;
+  background-size: 300px auto;
+  cursor: pointer;
+}
+
+.SimpleLoginIconChecked {
+  background-position: -25px 0;
+}
+
+.SimpleLoginIconUnchecked {
+  background-position: 0 0;
 }
 
 .InfoToggle {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 2px solid #999;
+  background: transparent;
   appearance: none;
   cursor: pointer;
   margin-right: 8px;
@@ -60,6 +103,37 @@
 }
 
 .SimpleLoginImg {
-  margin-top: 1px;
+  margin-top: -3px;
   cursor: pointer;
+}
+
+/* 간편로그인 정보저장 아이콘*/
+
+.SimpleLoginSaveInfo {
+  width: 280px;
+  height: 54px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  text-align: start;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  display: none;
+}
+.SimpleLoginSaveInfoClick {
+  display: block;
+}
+.HelpInfo {
+  display: block;
+  color: #fee500;
+  font-size: 12px;
+  line-height: 200%;
+}
+
+.HelpInfo:hover {
+  color: #fee500;
 }
