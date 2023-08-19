@@ -1,6 +1,6 @@
 import styles from "@/styles/LoginButtons.module.css";
 
-function LoginButtons({ label, name }) {
+function LoginButtons({ label, name, onClick }) {
   let ColorOption =
     label === "로그인" ? styles.PrimaryColor : styles.SecondaryColor;
   let HoverColor =
@@ -13,6 +13,7 @@ function LoginButtons({ label, name }) {
         className={`${styles.LoginButtons} ${ColorOption} ${HoverColor}`}
         aria-label={label}
         title={label}
+        onClick={onClick}
       >
         {name}
       </button>

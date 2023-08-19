@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import styles from "@/styles/Form.module.css";
 
-function Form() {
+function Form({ form, setForm }) {
   const [isUserIdInputBottomLine, setIsUserIdInputBottomLine] = useState(false);
   const [isPasswordInputBottomLine, setIsPasswordInputBottomLine] =
     useState(false);
@@ -31,6 +32,8 @@ function Form() {
     ? styles.AddMessage
     : styles.AddMessageNone;
 
+  console.log(form);
+
   return (
     <>
       <form>
@@ -44,6 +47,10 @@ function Form() {
             className={userIdInputClassName}
             onFocus={handleUserIdInputFocus}
             onBlur={handleInputBlur}
+            value={form.id}
+            onChange={(event) => {
+              setForm((prev) => ({ ...prev, id: event.target.value }));
+            }}
           />
           <div className={addMessageClassName}>
             <span className={`${styles.TipText}`}>TIP</span> 카카오메일이 있다면
@@ -57,6 +64,13 @@ function Form() {
             className={passwordInputClassName}
             onFocus={handlePasswordInputFocus}
             onBlur={handleInputBlur}
+            value={form.password}
+            onChange={(event) => {
+              setForm((prev) => ({
+                ...prev,
+                password: event.target.value,
+              }));
+            }}
           />
         </fieldset>
       </form>

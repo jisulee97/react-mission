@@ -4,20 +4,47 @@ import SimpleLoginButton from "./button/SimpleLoginButton";
 import LoginButtons from "./button/LoginButtons";
 import OrLine from "./OrLine";
 import TextButtons from "./button/TextButtons";
-// import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function LoginForm() {
-  // const [id, setId] = useState("");
+  const [form, setForm] = useState({
+    id: "",
+    password: "",
+  });
 
+  const [userData, setUserData] = useState();
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8090/api/collections/user/records")
+      .then((value) => {
+        return value.json();
+      })
+      .then((value) => {
+        setUserData(value);
+      });
+  }, []);
+
+  const onLogin = () => {
+    let isLoginSuccess = false;
+
+    userData.items.forEach((item) => {
+      if (item.email === form.id && item.password === form.password) {
+        alert("로그인 성공");
+        isLoginSuccess = true;
+      }
+    });
+
+    if (!isLoginSuccess) alert("로그인 실패");
+  };
   return (
     <div className={`${styles.LoginForm}`}>
       <div className={`${styles.LoginFormInnerBox}`}>
         {/* Form  */}
-        <Form />
+        <Form form={form} setForm={setForm} />
         {/* 간편 로그인 */}
         <SimpleLoginButton />
         {/* 로그인 버튼 */}
-        <LoginButtons label="로그인" name="로그인" />
+        <LoginButtons label="로그인" name="로그인" onClick={onLogin} />
         {/* 구분선 */}
         <OrLine />
         {/* 큐알코드 버튼 */}
