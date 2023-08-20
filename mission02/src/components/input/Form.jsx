@@ -32,11 +32,9 @@ function Form({ form, setForm }) {
     ? styles.AddMessage
     : styles.AddMessageNone;
 
-  console.log(form);
-
   return (
     <>
-      <form>
+      <form autoComplete="off">
         <fieldset className={`${styles.FieldSet}`}>
           <legend className={`${styles.A11yHidden}`}>로그인</legend>
           <input
